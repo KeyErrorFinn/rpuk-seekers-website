@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Hello Fellow Seekers!"
+    return "Hello Fellow Seekers! Cowabunga"
 
 if __name__ == '__main__':
     # Check if FLASK_ENV is set, if not, default to development
