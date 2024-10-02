@@ -41,7 +41,7 @@ jobs:
 
       - name: Initialize Elastic Beanstalk
         run: |
-          eb init -p docker ${{ secrets.EB_APPLICATION }} --region ${{ secrets.AWS_REGION }}
+          eb init -p docker "${{ secrets.EB_APPLICATION }}" --region ${{ secrets.AWS_REGION }}
 
       - name: Deploy to Elastic Beanstalk
         run: |
