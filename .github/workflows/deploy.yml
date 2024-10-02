@@ -39,6 +39,10 @@ jobs:
           docker tag ${{ secrets.ECR_REPO }}:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ secrets.ECR_REPO }}:latest
           docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ secrets.ECR_REPO }}:latest
 
+      - name: Initialize Elastic Beanstalk
+        run: |
+          eb init -p docker -r ${{ secrets.AWS_REGION }} ${{ secrets.ECR_REPO }}
+
       - name: Deploy to Elastic Beanstalk
         run: |
           eb deploy
