@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'AlphaMaleModern';
+    src: url("{{ url_for('static', filename='fonts/AlphaMaleModern.ttf') }}");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #868686;
+    transition: background-color 0.8s;
+    font-family: 'AlphaMaleModern', sans-serif;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+#logo {
+    width: 510px;
+    padding-top: 50px;
+    opacity: 0.2%;
+    transition: all 0.4s;
+}
+
+#logo:hover {
+    transition: all 0.8s;
+    opacity: 1;
+}
+
+#lie, #truth {
+    margin: 0;
+    text-align: center;
+    font-size: 80px;
+    transition: all 0.8s;
+}
+
+#truth span {
+    font-size: 40px;
+}
+
+#lie {
+    color: #151515;
+    margin-top: 20px;
+}
+
+#truth {
+    color: #DDDDDD;
+    margin-top: -80px;
+    opacity: 0;
+}
