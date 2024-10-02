@@ -39,6 +39,10 @@ jobs:
           docker tag ${{ secrets.ECR_REPO }}:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ secrets.ECR_REPO }}:latest
           docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ secrets.ECR_REPO }}:latest
 
+      - name: Initialize Elastic Beanstalk
+        run: |
+          eb init -p docker ${{ secrets.EB_APPLICATION }} --region ${{ secrets.AWS_REGION }}
+
       - name: Deploy to Elastic Beanstalk
         run: |
           eb deploy || (echo "Deployment failed. Listing application versions." && aws elasticbeanstalk describe-application-versions --application-name ${{ secrets.EB_APPLICATION }})
