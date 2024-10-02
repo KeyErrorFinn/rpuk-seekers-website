@@ -41,8 +41,8 @@ jobs:
 
       - name: Deploy to Elastic Beanstalk
         run: |
-        eb deploy || (echo "Deployment failed. Listing application versions." && aws elasticbeanstalk describe-application-versions --application-name ${{ secrets.EB_APPLICATION }})
+          eb deploy || (echo "Deployment failed. Listing application versions." && aws elasticbeanstalk describe-application-versions --application-name ${{ secrets.EB_APPLICATION }})
 
       - name: Check Environment Health
         run: |
-        eb health
+          eb health
