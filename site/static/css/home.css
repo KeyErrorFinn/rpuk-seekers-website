@@ -20,9 +20,12 @@ body {
 
 #logo {
     width: 510px;
-    padding-top: 50px;
+    margin-top: 50px;
     opacity: 0.2%;
+    border-radius: 50%;
     transition: all 0.4s;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 #logo:hover {
@@ -35,6 +38,7 @@ body {
     text-align: center;
     font-size: 80px;
     transition: all 0.8s;
+    user-select: none;
 }
 
 #truth span {
