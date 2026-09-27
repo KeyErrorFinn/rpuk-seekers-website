@@ -14,7 +14,7 @@
 
 An inactive Flask website made for The Seekers, a former group on the [Roleplay UK](https://www.roleplay.co.uk) FiveM server.
 
-The hosted site is no longer available. The repository remains as a small example of the original landing page and its historical AWS deployment setup. The deployment workflow is disabled.
+The hosted site is no longer available. The repository remains as a small example of the original landing page and its historical AWS deployment setup. The deployment workflow has no automatic trigger and is disabled in GitHub.
 
 ## What the page does
 

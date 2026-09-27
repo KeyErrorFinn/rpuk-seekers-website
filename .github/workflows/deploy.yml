@@ -1,9 +1,8 @@
 name: Deploy to AWS Elastic Beanstalk
 
 on:
-  push:
-    branches:
-      - main
+  # Historical deployment, kept for reference and available only by deliberate manual dispatch.
+  workflow_dispatch:
 
 jobs:
   deploy:
